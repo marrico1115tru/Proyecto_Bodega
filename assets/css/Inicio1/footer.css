@@ -1,0 +1,26 @@
+.footer{
+    background-color:#59889D ;
+    height: 199px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: flex-start;
+    color:#000;
+}
+.footer-info{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.footer-contact{
+    text-align: left;
+
+}
+
+.footer-redes-content{
+    padding: 5px 10px;
+    background-color: #FFFFFF;
+    margin-left: 10px;
+}
