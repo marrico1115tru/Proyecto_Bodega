@@ -1,0 +1,11 @@
+
+.card-bg-dark {
+    color: #000;
+    background-color: #ECE3E3;
+}
+
+.card-img-top {
+    height: 200px; /* Fijar una altura para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen para que se ajuste sin deformarse */
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+}
