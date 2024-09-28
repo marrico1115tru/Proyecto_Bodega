@@ -81,18 +81,28 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="">
                                 <i class="fas fa-wine-bottle"></i>
                                 <span class="d-none d-sm-inline">Bodegas</span>
                                 <i class="fas fa-chevron-down float-end"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#sedesSubmenu" role="button" aria-expanded="false" aria-controls="sedesSubmenu" data-bs-parent="#barra-lateral">
                                 <i class="fas fa-building"></i>
                                 <span class="d-none d-sm-inline">Sedes</span>
                                 <i class="fas fa-chevron-down float-end"></i>
                             </a>
+                            <div class="collapse" id="sedesSubmenu">
+                                <ul class="nav flex-column ml-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link sub-link" href="sede_principal.html">
+                                            <i class="fas fa-box"></i> <!-- Icono para "Principal" -->
+                                            <span class="d-none d-sm-inline">Sede Principal</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" href="#entryExitSubmenu" role="button"
