@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,15 +7,15 @@
     <title>Administrador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\DELL\Downloads\2\Proyecto_Bodega\assets\css\pages">
     <link rel="stylesheet" href="../assets/css/index.css">
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="C:\Users\DELL\Downloads\2\Proyecto_Bodega\assets\css\pages\estadisticas.css">
 </head>
 
 <body>
-
     <header>
         <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -26,9 +25,9 @@
 
     <div class="container-fluid">
         <div class="row flex-nowrap">
+             <!-- Aquí se cargará el sidebar -->
             <nav class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar">
-                <div
-                    class="d-flex flex-column align-items-center justify-content-start px-3 pt-2 text-white min-vh-100">
+                <div class="d-flex flex-column align-items-center justify-content-start px-3 pt-2 text-white min-vh-100">
                     <div class="user-info text-center py-4">
                         <i class="fas fa-user-circle fa-3x"></i>
                         <p class="mt-2 d-none d-sm-block">ADMINISTRADOR</p>
@@ -44,12 +43,13 @@
                             <a class="nav-link" data-bs-toggle="collapse" href="#productsSubmenu" role="button"
                                 aria-expanded="false" aria-controls="productsSubmenu">
                                 <i class="fas fa-box"></i>
+                                
                                 <span class="d-none d-sm-inline">
                                     Administracion
                                 </span>
                                 <i class="fas fa-chevron-down float-end"></i>
                             </a>
-                            <div class="collapse show" id="productsSubmenu">
+                            <div class="collapse" id="productsSubmenu">
                                 <ul class="nav flex-column ml-3">
                                     <li class="nav-item">
                                         <a class="nav-link sub-link" href="categorias.html">
@@ -58,7 +58,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link sub-link active" href="proveedores.html">
+                                        <a class="nav-link sub-link" href="proveedores.html">
                                             <i class="fas fa-truck"></i>
                                             <span class="d-none d-sm-inline">Proveedores</span>
                                         </a>
@@ -75,7 +75,6 @@
                                             <span class="d-none d-sm-inline">Usuarios</span>
                                         </a>
                                     </li>
-
                                 </ul>
                             </div>
                         </li>
@@ -89,13 +88,13 @@
                                 <ul class="nav flex-column ml-3">
                                     <li class="nav-item">
                                         <a class="nav-link sub-link" href="bodega_principal.html">
-                                            <i class="fas fa-box"></i> <!-- Icono para "Principal" -->
+                                            <i class="fas fa-box"></i> 
                                             <span class="d-none d-sm-inline">Principal</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link sub-link" href="inventario.html">
-                                            <i class="fas fa-warehouse"></i> <!-- Icono para "Inventario" -->
+                                            <i class="fas fa-warehouse"></i> 
                                             <span class="d-none d-sm-inline">Inventario</span>
                                         </a>
                                     </li>
@@ -112,7 +111,7 @@
                                 <ul class="nav flex-column ml-3">
                                     <li class="nav-item">
                                         <a class="nav-link sub-link" href="sede_principal.html">
-                                            <i class="fas fa-box"></i> <!-- Icono para "Principal" -->
+                                            <i class="fas fa-box"></i> 
                                             <span class="d-none d-sm-inline">Sede Principal</span>
                                         </a>
                                     </li>
@@ -120,7 +119,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse show" href="#entryExitSubmenu" role="button"
+                            <a class="nav-link" data-bs-toggle="collapse" href="#entryExitSubmenu" role="button"
                                 aria-expanded="false" aria-controls="entryExitSubmenu">
                                 <i class="fas fa-ticket-alt"></i>
                                 <span class="d-none d-sm-inline">Entradas y Salidas</span>
@@ -140,10 +139,11 @@
                                             <span class="d-none d-sm-inline">Salidas</span>
                                         </a>
                                     </li>
+                                   
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item"></li>
+                        <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" href="#EstadisticasSubmenu" role="button" aria-expanded="false" aria-controls="bodegasSubmenu">
                                 <i class="fas fa-wine-bottle"></i>
                                 <span class="d-none d-sm-inline">Estadisticas</span>
@@ -166,75 +166,83 @@
                     </ul>
                 </div>
             </nav>
-            <div class="col p-4">
-                <div class="row">
-                    <div class="col-4">
-                        <a type="button" href="proveedor-form.html" class="btn btn-success">Nuevo</a>
-                    </div>
-                    <div class="col-6 ms-auto">
-                        <div class="input-group search-bar">
-                            <input type="text" class="form-control" placeholder="Buscar material">
-                            <button class="btn btn-outline-secondary" type="button">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <table class="mt-4 table table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">NAME</th>
-                            <th scope="col">CONTACT</th>
-                            <th scope="col">EMAIL</th>
-                            <th scope="col">CONTRACT TERMS</th>
-                            <th scope="col">OPCIONES</th>
-                          </tr>
+
+            <div class="container-fluid mt-5"> 
+                <h2 class="mb-4">Datos de Bodegas</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered table-custom">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Bodega</th>
+                                <th>Sede</th>
+                                <th>Centro</th>
+                                <th>Municipio</th>
+                                <th>Productos</th>
+                                <th>Usuarios</th>
+                                <th>Prestamos</th>
+                                <th>Devoluciones</th>
+                                <th>Opciones</th>
+                            </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>311345678</td>
-                            <td>exmple@example.com</td>
-                            <td>Terminos y condiciones</td>
-                            <td>
-                                <button type="button" class="btn btn-success">Editar</button>
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
-                                    Eliminar
-                                </button>
-                            </td>
-                          </tr>
+                            <tr>
+                                <td>TIC</td>
+                                <td>Yamboró</td>
+                                <td>Gestión y desarrollo sur colombiano</td>
+                                <td>Pitalito</td>
+                                <td>500</td>
+                                <td>230</td>
+                                <td>100</td>
+                                <td>60</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i> Editar</button>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gastronomía</td>
+                                <td>Yamboró</td>
+                                <td>Gestión y desarrollo sur colombiano</td>
+                                <td>Pitalito</td>
+                                <td>12000</td>
+                                <td>500</td>
+                                <td>200</td>
+                                <td>20</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i> Editar</button>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Multimedia</td>
+                                <td>Yamboró</td>
+                                <td>Gestión y desarrollo sur colombiano</td>
+                                <td>Pitalito</td>
+                                <td>15000</td>
+                                <td>730</td>
+                                <td>300</td>
+                                <td>200</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i> Editar</button>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Agropecuaria</td>
+                                <td>Yamboró</td>
+                                <td>Gestión y desarrollo sur colombiano</td>
+                                <td>Pitalito</td>
+                                <td>9000</td>
+                                <td>400</td>
+                                <td>150</td>
+                                <td>60</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i> Editar</button>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Eliminar</button>
+                                </td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
                 </div>
-                
             </div>
-        </div>
-    </div>
-
-    
-    <!-- Modal -->
-    <div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalEliminar" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modalEliminar"> ¿Esta Seguro?</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Se borrara de forma permanente</p>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary">Confirmar</button>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    <script src="../assets/js/sidebar.js"></script>
-</body>
-
-</html>
+            

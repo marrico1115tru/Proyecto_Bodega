@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -80,47 +79,21 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#bodegasSubmenu" role="button" aria-expanded="false" aria-controls="bodegasSubmenu">
+                            <a class="nav-link" href="#">
                                 <i class="fas fa-wine-bottle"></i>
                                 <span class="d-none d-sm-inline">Bodegas</span>
                                 <i class="fas fa-chevron-down float-end"></i>
                             </a>
-                            <div class="collapse" id="bodegasSubmenu">
-                                <ul class="nav flex-column ml-3">
-                                    <li class="nav-item">
-                                        <a class="nav-link sub-link" href="bodega_principal.html">
-                                            <i class="fas fa-box"></i> <!-- Icono para "Principal" -->
-                                            <span class="d-none d-sm-inline">Principal</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link sub-link" href="inventario.html">
-                                            <i class="fas fa-warehouse"></i> <!-- Icono para "Inventario" -->
-                                            <span class="d-none d-sm-inline">Inventario</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#sedesSubmenu" role="button" aria-expanded="false" aria-controls="sedesSubmenu" data-bs-parent="#barra-lateral">
+                            <a class="nav-link" href="#">
                                 <i class="fas fa-building"></i>
                                 <span class="d-none d-sm-inline">Sedes</span>
                                 <i class="fas fa-chevron-down float-end"></i>
                             </a>
-                            <div class="collapse" id="sedesSubmenu">
-                                <ul class="nav flex-column ml-3">
-                                    <li class="nav-item">
-                                        <a class="nav-link sub-link" href="sede_principal.html">
-                                            <i class="fas fa-box"></i> <!-- Icono para "Principal" -->
-                                            <span class="d-none d-sm-inline">Sede Principal</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse show" href="#entryExitSubmenu" role="button"
+                            <a class="nav-link" data-bs-toggle="collapse" href="#entryExitSubmenu" role="button"
                                 aria-expanded="false" aria-controls="entryExitSubmenu">
                                 <i class="fas fa-ticket-alt"></i>
                                 <span class="d-none d-sm-inline">Entradas y Salidas</span>
@@ -140,10 +113,11 @@
                                             <span class="d-none d-sm-inline">Salidas</span>
                                         </a>
                                     </li>
+                                   
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item"></li>
+                        <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" href="#EstadisticasSubmenu" role="button" aria-expanded="false" aria-controls="bodegasSubmenu">
                                 <i class="fas fa-wine-bottle"></i>
                                 <span class="d-none d-sm-inline">Estadisticas</span>
@@ -167,70 +141,34 @@
                 </div>
             </nav>
             <div class="col p-4">
-                <div class="row">
-                    <div class="col-4">
-                        <a type="button" href="proveedor-form.html" class="btn btn-success">Nuevo</a>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputNombre" class="form-label">Id</label>
+                        <input type="text" class="form-control" id="inputId">
                     </div>
-                    <div class="col-6 ms-auto">
-                        <div class="input-group search-bar">
-                            <input type="text" class="form-control" placeholder="Buscar material">
-                            <button class="btn btn-outline-secondary" type="button">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
+                    <div class="col-md-6">
+                        <label for="inputApellido" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="inputNombre">
                     </div>
-                </div>
-                <div class="row">
-                    <table class="mt-4 table table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">NAME</th>
-                            <th scope="col">CONTACT</th>
-                            <th scope="col">EMAIL</th>
-                            <th scope="col">CONTRACT TERMS</th>
-                            <th scope="col">OPCIONES</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>311345678</td>
-                            <td>exmple@example.com</td>
-                            <td>Terminos y condiciones</td>
-                            <td>
-                                <button type="button" class="btn btn-success">Editar</button>
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
-                                    Eliminar
-                                </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
+                    <div class="col-md-6">
+                      <label for="inputContacto" class="form-label">Cantidad</label>
+                      <input type="tel" class="form-control" id="inputCantidad">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail" class="form-label">Categoria</label>
+                        <input type="email" class="form-control" id="inputCategoria">
+                      </div>
+                    <div class="col-md-12">
+                        <label for="terminosTextarea" class="form-label">Fecha de entrada</label>
+                        <textarea class="form-control" id="terminosTextarea" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-success">Agregar</button>
+                    </div>
+                  </form>
                 
             </div>
-        </div>
-    </div>
-
-    
-    <!-- Modal -->
-    <div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalEliminar" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modalEliminar"> ¿Esta Seguro?</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Se borrara de forma permanente</p>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary">Confirmar</button>
-            </div>
-        </div>
         </div>
     </div>
 
