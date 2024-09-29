@@ -7,12 +7,11 @@
     <title>Administrador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/pages/admin.css">
+    <link rel="stylesheet" href="../assets/css/pages/inventario.css">
     <link rel="stylesheet" href="../assets/css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../assets/css/pages/admin.css">
 </head>
 
 <body>
@@ -43,7 +42,6 @@
                             <a class="nav-link" data-bs-toggle="collapse" href="#productsSubmenu" role="button"
                                 aria-expanded="false" aria-controls="productsSubmenu">
                                 <i class="fas fa-box"></i>
-                                
                                 <span class="d-none d-sm-inline">
                                     Administracion
                                 </span>
@@ -84,7 +82,7 @@
                                 <span class="d-none d-sm-inline">Bodegas</span>
                                 <i class="fas fa-chevron-down float-end"></i>
                             </a>
-                            <div class="collapse" id="bodegasSubmenu">
+                            <div class="collapse show" id="bodegasSubmenu">
                                 <ul class="nav flex-column ml-3">
                                     <li class="nav-item">
                                         <a class="nav-link sub-link" href="bodega_principal.html">
@@ -92,10 +90,12 @@
                                             <span class="d-none d-sm-inline">Principal</span>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link sub-link" href="inventario.html">
+
+                                    <li class="nav-item" >
+                                        <a class="nav-link sub-link active" href="inventario.html">
                                             <i class="fas fa-warehouse"></i> <!-- Icono para "Inventario" -->
                                             <span class="d-none d-sm-inline">Inventario</span>
+                                    
                                         </a>
                                     </li>
                                 </ul>
@@ -139,16 +139,8 @@
                                             <span class="d-none d-sm-inline">Salidas</span>
                                         </a>
                                     </li>
-                                   
                                 </ul>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-building"></i>
-                                <span class="d-none d-sm-inline">Estadisticas</span>
-                                <i class="fas fa-chevron-down float-end"></i>
-                            </a>
                         </li>
                         <li class="nav-item mt-3">
                             <a class="nav-link" href="../index.html">
@@ -159,14 +151,56 @@
                     </ul>
                 </div>
             </nav>
-            <div class="col py-3 main-container">
-                <div class="welcome-container">
-                    <h1 class="welcome-title"><i class="fas fa-door-open"></i> Bienvenido</h1>
-                    <p class="card-text">Aquí encontrarás las herramientas para gestionar tu inventario de manera eficiente.</p>
-                    <img src="../assets/images/yamboro.jpg" alt="Imagen de Bienvenida" class="responsive-image shadow-image">
+            <div class="col py-3">
+               
+                <h1>INVENTARIO</h1>
+                <div class="col p-4">
+                    <div class="row">
+                        <div class="col-6 ms-auto">
+                            <div class="input-group search-bar">
+                                <input type="text" class="form-control" placeholder="Buscar Material">
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <table class="mt-4 table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">CÓDIGO</th>
+                                <th scope="col">NOMBRE</th>
+                                <th scope="col">CATEGORÍAS</th>
+                                <th scope="col">FECHA DE ENTRADA</th>
+                                <th scope="col">CANTIDAD DISPONIBLE</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">657483</th>
+                                <td>Laura</td>
+                                <td>Suministros de limpieza</td>
+                                <td>10/08/2024</td>
+                                <td>5</td>
+                                
+                              </tr>
+                    
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+                <h2>Informes de consumo:</h2>
+                <div class="blue-box">
+
+                    <h3>Producto con excelencia:</h3>
+                    <p>Remolacha</p>
+                    <h4>Producto de mayor consumo:</h4>
+                    <P>Café</P>
+                
                 </div>
             </div>
-            
         </div>
     </div>
 
