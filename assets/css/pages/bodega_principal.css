@@ -1,0 +1,29 @@
+
+
+.col.py-3{
+    padding:16px;
+    background-color:#f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+h1{
+    text-align: center;
+    color:  #000000;
+    margin-bottom: 40px;
+    font-family:georgia,serif;
+}
+
+h2,h3{
+    color:  #000000;
+    margin-bottom: 10px;
+    font-family:georgia,serif;
+}
+
+p{
+    margin-bottom: 15px;
+    color:#495057;
+    line-height: 1.5;
+}

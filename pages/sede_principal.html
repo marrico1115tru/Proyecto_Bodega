@@ -7,16 +7,16 @@
     <title>Administrador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/pages/categorias.css">
-    <link rel="stylesheet" href="../assets/css/index.css">
 
+
+    <link rel="stylesheet" href="../assets/css/pages/sede_principal.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-
     <header>
         <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -26,7 +26,8 @@
 
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <nav id="sidebar" class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar">
+             <!-- Aquí se cargará el sidebar -->
+            <nav class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar">
                 <div class="d-flex flex-column align-items-center justify-content-start px-3 pt-2 text-white min-vh-100">
                     <div class="user-info text-center py-4">
                         <i class="fas fa-user-circle fa-3x"></i>
@@ -34,24 +35,26 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="admin.html">
+                            <a class="nav-link active" href="admin.html">
                                 <i class="fas fa-home"></i>
                                 <span class="d-none d-sm-inline">Inicio</span>
                             </a>
                         </li>
+                    
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" href="#productsSubmenu" role="button"
                                 aria-expanded="false" aria-controls="productsSubmenu">
                                 <i class="fas fa-box"></i>
+                                
                                 <span class="d-none d-sm-inline">
                                     Administracion
                                 </span>
                                 <i class="fas fa-chevron-down float-end"></i>
                             </a>
-                            <div class="collapse show" id="productsSubmenu">
+                            <div class="collapse" id="productsSubmenu">
                                 <ul class="nav flex-column ml-3">
                                     <li class="nav-item">
-                                        <a class="nav-link sub-link active" href="categorias.html">
+                                        <a class="nav-link sub-link" href="categorias.html">
                                             <i class="fas fa-list"></i>
                                             <span class="d-none d-sm-inline">Categorias</span>
                                         </a>
@@ -83,29 +86,39 @@
                                 <span class="d-none d-sm-inline">Bodegas</span>
                                 <i class="fas fa-chevron-down float-end"></i>
                             </a>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="collapse" href="#sedesSubmenu" role="button" aria-expanded="false" aria-controls="sedesSubmenu" data-bs-parent="#barra-lateral">
-                                    <i class="fas fa-building"></i>
-                                    <span class="d-none d-sm-inline">Sedes</span>
-                                    <i class="fas fa-chevron-down float-end"></i>
-                                </a>
-                                <div class="collapse" id="sedesSubmenu">
-                                    <ul class="nav flex-column ml-3">
-                                        <li class="nav-item">
-                                            <a class="nav-link sub-link" href="sede_principal.html">
-                                                <i class="fas fa-box"></i> <!-- Icono para "Principal" -->
-                                                <span class="d-none d-sm-inline">Sede Principal</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+                            <div class="collapse" id="bodegasSubmenu">
+                                <ul class="nav flex-column ml-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link sub-link" href="bodega_principal.html">
+                                            <i class="fas fa-box"></i> <!-- Icono para "Principal" -->
+                                            <span class="d-none d-sm-inline">Principal</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link sub-link" href="inventario.html">
+                                            <i class="fas fa-warehouse"></i> <!-- Icono para "Inventario" -->
+                                            <span class="d-none d-sm-inline">Inventario</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#sedesSubmenu" role="button" aria-expanded="false" aria-controls="sedesSubmenu" data-bs-parent="#barra-lateral">
                                 <i class="fas fa-building"></i>
                                 <span class="d-none d-sm-inline">Sedes</span>
                                 <i class="fas fa-chevron-down float-end"></i>
                             </a>
+                            <div class="collapse" id="sedesSubmenu">
+                                <ul class="nav flex-column ml-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link sub-link active" href="sede_principal.html">
+                                            <i class="fas fa-box"></i> <!-- Icono para "Sede Principal" -->
+                                            <span class="d-none d-sm-inline">Sede Principal</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" href="#entryExitSubmenu" role="button"
@@ -140,56 +153,36 @@
                     </ul>
                 </div>
             </nav>
-            <div class="col py-3">
-                <div class="row">
-                    <!-- Columna 1 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="card card-bg-dark">
-                            <img src="../assets/images/categoria/Gastronomia.jpg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Gastronomia</h5>
-                                <p class="card-text">Productos del area de gastronomia</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Columna 2 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="card card-bg-dark">
-                            <img src="../assets/images/categoria/Tic.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Tic</h5>
-                                <p class="card-text">Productos del area de Tic</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Columna 3 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="card card-bg-dark">
-                            <img src="../assets/images/categoria/agropecuaria.png" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Agropecuario</h5>
-                                <p class="card-text">Productos del area de Agropecuario</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <!-- Columna 4 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="card card-bg-dark">
-                            <img src="../assets/images/categoria/Escuela_cafe.png" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Escuela del Café</h5>
-                                <p class="card-text">Productos de la Escuela del Café</p>
-                            </div>
-                        </div>
-                    </div>
+            
+         
+            <div class="info-wrapper">
+                <img src="../assets/images/sedes" alt="Imagen de la sede" class="imagen-sede">
+                <div class="info-text">
+                    <h2>Información Básica de la Sede</h2>
+                    <h3>Ubicación:</h3>
+                    <p>Carrera 6 #633, Pitalito, Huila</p>
+                    <h3>Responsable:</h3>
+                    <p>Sergio Armando Jaramillo Claros</p>
+                    <h3>Tipo de bodega:</h3>
+                    <ul>
+                        <li>Bodega de almacenamiento: Guarda productos en grandes cantidades.</li>
+                        <li>Bodega de distribución: Facilita la logística de recepción y envío de mercancías.</li>
+                        <li>Bodega de refrigeración: Almacena productos perecederos con control de temperatura.</li>
+                        <li>Bodega de vinos: Diseñada para la maduración del vino con condiciones específicas.</li>
+                        <li>Bodega de materiales peligrosos: Cumple normativas para almacenamiento de químicos.</li>
+                        <li>Bodega automatizada: Utiliza tecnología para el manejo automatizado de inventarios.</li>
+                        <li>Bodega de e-commerce: Maneja el inventario de productos vendidos en línea.</li>
+                        <li>Bodega de herramientas y equipos: Almacena maquinaria y herramientas.</li>
+                    </ul>
+                    <h3>Personal:</h3>
+                    <p>Coordinador, instructores, aprendices, pasantes y operarios</p>
                 </div>
             </div>
             
+        
+            </div>
         </div>
     </div>
-
 
     <script src="../assets/js/sidebar.js"></script>
 </body>
