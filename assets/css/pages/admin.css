@@ -1,0 +1,46 @@
+/* Estilo para el contenedor principal */
+.main-container {
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Fondo degradado */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Separación del borde superior e inferior */
+}
+
+/* Estilo para el título de bienvenida */
+.welcome-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra del texto */
+}
+.card-text{
+    color: #555555;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Estilo para la imagen de bienvenida */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Sombra para la imagen */
+.shadow-image {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.welcome-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 15px; 
+    background-color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
